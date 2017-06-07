@@ -1,0 +1,44 @@
+{
+  "name": "@crazyfactory/png-compression-cli",
+  "description": "a cli tool to compresses png encoded files using google zopfli",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "xo",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "pngc": "./bin/index.js"
+  },
+  "keywords": [
+    "jpg",
+    "jpeg",
+    "compression",
+    "guetzli",
+    "images"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crazyfactory/png-compression-cli.git"
+  },
+  "author": "Wolf T. Mathes",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "commander": "^2.9.0",
+    "image-type": "^2.1.0",
+    "read-chunk": "^2.0.0",
+    "update-notifier": "^2.2.0",
+    "zopflipng-bin": "^4.0.0"
+  },
+  "devDependencies": {
+    "semantic-release": "^6.3.6",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "space": 4,
+    "rules": {
+      "import/no-unresolved": 0
+    }
+  }
+}
