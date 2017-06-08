@@ -68,8 +68,12 @@ const jobs = files.map(file => file && t(() =>
         }
         execFile(zopfli, args, err => {
             if (err) {
-                console.log(file + ' throw error!');
-                throw err;
+                if (program.verbose) {
+                    console.log(chalk.gray(err));
+                }
+                console.log(chalk.red(file + ' failed with error!'));
+                resolve();
+                return;
             }
 
             const newSize = fs.statSync(output).size;
@@ -90,8 +94,11 @@ const jobs = files.map(file => file && t(() =>
 
 // Report
 Promise.all(jobs).then(err => {
+    const failCount = files.length - compressedCount;
+    if (err || failCount > 0) {
+        console.log(chalk.red('Could not process ' + failCount + ' file(s).'));
+    }
+
     const percDiff = Math.round((totalSaved / totalSize) * 100);
-    console.log(err || (files.length !== compressedCount)
-        ? chalk.yellow('Compressed ' + compressedCount + ' (of ' + files.length + ') file(s), saving ' + totalSaved + ' bytes! (' + percDiff + '%)')
-        : chalk.green('Compressed ' + compressedCount + ' file(s), saving ' + totalSaved + ' bytes! (' + percDiff + '%)'));
+    console.log(chalk.yellow('Compressed ' + compressedCount + ' file(s), saving ' + totalSaved + ' bytes (' + percDiff + '%)'));
 });
