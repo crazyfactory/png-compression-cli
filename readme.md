@@ -40,6 +40,10 @@ or
 
     $ pngc -f assets/img1.jpg,assets/img2.png
 
+Change the parallel number of operations by using the -c flag
+
+    $ pngc -c 2
+
 for more help infomation, you could run the -h flag to check it out.
 
     $ pngc -h
