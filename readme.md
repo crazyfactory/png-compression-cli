@@ -1,4 +1,4 @@
-# jpeg-compression-cli
+# png-compression-cli
 
 [![npm](https://img.shields.io/npm/v/@crazyfactory/png-compression-cli.svg)](http://www.npmjs.com/package/@crazyfactory/png-compression-cli)
 [![Build Status](https://travis-ci.org/crazyfactory/png-compression-cli.svg?branch=master)](https://travis-ci.org/crazyfactory/png-compression-cli)
