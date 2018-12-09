@@ -30,7 +30,7 @@
     "read-chunk": "^2.0.0",
     "throat": "^4.0.0",
     "update-notifier": "^2.2.0",
-    "zopflipng-bin": "^4.0.0"
+    "zopflipng-bin": "^5.0.0"
   },
   "devDependencies": {
     "semantic-release": "^15.0.0",
