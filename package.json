@@ -27,7 +27,7 @@
     "commander": "^2.9.0",
     "fs-extra": "^4.0.0",
     "image-type": "^3.0.0",
-    "read-chunk": "^2.0.0",
+    "read-chunk": "^3.2.0",
     "throat": "^4.0.0",
     "update-notifier": "^2.2.0",
     "zopflipng-bin": "^4.0.0"
